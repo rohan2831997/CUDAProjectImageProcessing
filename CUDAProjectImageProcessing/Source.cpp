@@ -110,7 +110,7 @@ int main(int argc, char* argv[])
             outputPath = outputPath.substr(0, dot);
         }
 
-        std::string outputx = outputPath + "output.pgm";
+        std::string outputx = outputPath + "outputx.pgm";
         std::string outputy = outputPath + "outputy.pgm";
 
         // 8 bit greyscale image
@@ -165,8 +165,8 @@ int main(int argc, char* argv[])
 
         saveImage(outputx, oHostDstX);
         std::cout << "Saved image: " << outputx << std::endl;
-        //saveImage(outputy, oHostDstY);
-        //std::cout << "Saved image: " << outputy << std::endl;
+        saveImage(outputy, oHostDstY);
+        std::cout << "Saved image: " << outputy << std::endl;
     }
     catch (...)
     {
